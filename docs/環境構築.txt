@@ -1,0 +1,14 @@
+＜iosのエミュレータを開く＞
+ターミナルで以下のコマンドを実行
+open ios/Runner.xcworkspace
+Xcodeのワークスペースが開くのでエミュレータを起動
+
+<iosを実機で開くための環境構築＞
+brew install --HEAD usbmuxd
+brew link usbmuxd
+brew install --HEAD libimobiledevice
+brew install ideviceinstaller ios-deploy cocoapods
+pod setup
+この５つのコマンドを実行してから
+open ios/Runner.xcworkspace
+にてappleIDでサインインする。
