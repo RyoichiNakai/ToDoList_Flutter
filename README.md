@@ -2,15 +2,24 @@
 
 A new Flutter application.
 
-## Getting Started
+# DEMO
 
-This project is a starting point for a Flutter application.
+# Features
+This application is for ToDoList, Expense Management, Budget Management.
 
-A few resources to get you started if this is your first Flutter project:
+# Requirement
+Refer to pubspec.yaml and install flutter-sdk plugin.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+# Usage
+If you wanna install this repository, please do according to the following.
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```bash
+git clone https://github.com/RyoichiNakai/ToDoList_Flutter
+```
+# Note
+Under development.
+
+# Author
+* Name: Ryoichi Nakai
+* E-mail: elmobasketball0913@me.com
+
