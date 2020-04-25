@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:todolist/widgets/top_appbar.dart';
+import 'package:todolist/widgets/floating_button.dart';
 
 class MyToDoListScreen extends StatefulWidget {
   MyToDoListScreen({Key key}) : super(key: key);
@@ -12,12 +13,23 @@ class MyToDoListScreen extends StatefulWidget {
 class _MyToDoListScreenState extends State<MyToDoListScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        resizeToAvoidBottomInset: true,
-        appBar: MyAppBar.buildAppBar(context),
-        body: Center(
-          child: Text('aho'),
-        )
+    return SafeArea(
+      child: Scaffold(
+          resizeToAvoidBottomInset: true,
+          floatingActionButton: MyFloatingButton.buildFloatingButton(context),
+          body: ListView.builder(
+              itemBuilder: (BuildContext context, int index){
+                return _buildListView();
+              }
+          )
+      )
+
+    );
+  }
+
+  Widget _buildListView() {
+    return ListTile(
+      //todo:implement todolist
     );
   }
 }

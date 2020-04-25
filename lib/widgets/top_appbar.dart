@@ -32,10 +32,7 @@ class MyAppBar {
             children: <Widget>[
               _buildAppBarLeading(context),
               Expanded(
-                child: Text(
-                  'Title',
-                  textAlign: TextAlign.center,
-                ),
+                child: Container()
               ),
               _buildAppBarTrailing(context)
             ],
