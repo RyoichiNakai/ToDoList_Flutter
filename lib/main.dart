@@ -28,6 +28,7 @@ class MyApp extends StatelessWidget {
     primarySwatch: Colors.blue,
     buttonColor: Colors.white,
     backgroundColor: Colors.blue,
+    textSelectionColor: Colors.black,
   );
 
 

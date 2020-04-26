@@ -32,7 +32,7 @@ class MyAppBar {
             children: <Widget>[
               _buildAppBarLeading(context),
               Expanded(
-                child: Container()
+                child: Center(child: Text('TODOリスト', style: TextStyle(color: Colors.white)) )
               ),
               _buildAppBarTrailing(context)
             ],
