@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:todolist/utils/app.dart';
 
-class MyAppBar {
+class MyTopAppBar {
   static const _appBarIconSize = 25.0;
 
   //TODO場所を移動するかも
@@ -22,19 +22,18 @@ class MyAppBar {
     //TODO: _onPressedGear()
   }
 
-  static Widget buildAppBar(BuildContext context){
-    print(AppInfo.appBarHeight);
+  static Widget buildCupertinoNavigationBar(BuildContext context){
     //TODO:ここが重なるのをどうにかする
     return  CupertinoNavigationBar(
           backgroundColor: Theme.of(context).primaryColor,
           middle: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
-              _buildAppBarLeading(context),
+              _buildCupertinoNavigationBarLeading(context),
               Expanded(
                 child: Center(child: Text('TODOリスト', style: TextStyle(color: Colors.white)) )
               ),
-              _buildAppBarTrailing(context)
+              _buildCupertinoNavigationBarTrailing(context)
             ],
           ),
 
@@ -42,7 +41,7 @@ class MyAppBar {
 
   }
 
-  static Widget _buildAppBarLeading(BuildContext context){
+  static Widget _buildCupertinoNavigationBarLeading(BuildContext context){
     return Row(
       crossAxisAlignment: CrossAxisAlignment.end,
       mainAxisAlignment: MainAxisAlignment.start,
@@ -67,7 +66,7 @@ class MyAppBar {
     );
   }
 
-  static Widget _buildAppBarTrailing(BuildContext context){
+  static Widget _buildCupertinoNavigationBarTrailing(BuildContext context){
     return Row(
       crossAxisAlignment: CrossAxisAlignment.center,
       mainAxisAlignment: MainAxisAlignment.end,

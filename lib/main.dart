@@ -24,10 +24,11 @@ class MyApp extends StatelessWidget {
     );
   }
 
+  //todo:try to change themecolor
   final themeData = ThemeData(
     primarySwatch: Colors.blue,
     buttonColor: Colors.white,
-    backgroundColor: Colors.blue,
+    backgroundColor: Colors.teal,
     textSelectionColor: Colors.black,
   );
 

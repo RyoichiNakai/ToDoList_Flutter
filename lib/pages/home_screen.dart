@@ -16,7 +16,7 @@ class _MyHomeScreenState extends State<MyHomeScreen> {
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
-      navigationBar: MyAppBar.buildAppBar(context),
+      navigationBar: MyTopAppBar.buildCupertinoNavigationBar(context),
       child : MyBottomNavigationBar(),
     );
   }
