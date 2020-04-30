@@ -24,12 +24,13 @@ class MyApp extends StatelessWidget {
     );
   }
 
-
+  //todo:ダークモードも適応できるようにする
   //todo:try to change themecolor
-  final themeData = ThemeData(
-    primarySwatch: Colors.blue,
+  final themeData = ThemeData.dark().copyWith(
+    primaryColorLight: Colors.blue,
+    primaryColorDark: Colors.black,
     buttonColor: Colors.white,
-    backgroundColor: Colors.teal,
+    backgroundColor: Colors.blueGrey[50],
     textSelectionColor: Colors.black,
   );
 

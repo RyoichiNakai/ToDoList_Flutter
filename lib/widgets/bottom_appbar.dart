@@ -10,17 +10,26 @@ class MyBottomAppBar {
       child: Material(
         color: Theme.of(context).backgroundColor,
         child: TabBar(
-          // タブのオプション
           //todo:バックグラウンドカラーとうの変更
             isScrollable: true,
-            unselectedLabelColor: Colors.blue.withOpacity(0.3),
-            unselectedLabelStyle: TextStyle(fontSize: 12.0),
-            labelColor: Colors.black,
-            labelStyle: TextStyle(fontSize: 16.0),
-            indicatorColor: Colors.red,
-            indicatorWeight: 2.0,
+            unselectedLabelColor: Colors.grey,
+            unselectedLabelStyle: TextStyle(fontSize: AppInfo.unselectedTabFontSize),
+            labelColor: Theme.of(context).primaryColor,
+            labelStyle: TextStyle(fontSize: AppInfo.selectedTabFontSize),
+            indicator: BoxDecoration(
+              color: Colors.blueGrey[200],
+              border: Border(
+                bottom: BorderSide(
+                  color: Theme.of(context).primaryColor,
+                  width: 2.0
+                )
+              )
+            ),
+            //indicatorColor: Theme.of(context).primaryColor,
+            //indicatorWeight: 2.0,
             // タブに表示する内容
             tabs: AppInfo.getTabList(AppInfo.stringList, AppInfo.stringList.length)
+
         ),
       ),
     );
