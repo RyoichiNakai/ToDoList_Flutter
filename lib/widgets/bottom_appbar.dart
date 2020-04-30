@@ -17,7 +17,7 @@ class MyBottomAppBar {
             labelColor: Theme.of(context).primaryColor,
             labelStyle: TextStyle(fontSize: AppInfo.selectedTabFontSize),
             indicator: BoxDecoration(
-              color: Colors.blueGrey[200],
+              color: Theme.of(context).bottomAppBarColor,
               border: Border(
                 bottom: BorderSide(
                   color: Theme.of(context).primaryColor,

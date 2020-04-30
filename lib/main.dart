@@ -11,7 +11,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: themeData,
+      theme: themeDataLight,
+      darkTheme: themeDataDark,
       localizationsDelegates: [
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
@@ -24,15 +25,25 @@ class MyApp extends StatelessWidget {
     );
   }
 
-  //todo:ダークモードも適応できるようにする
+  //todo:色がいい感じになる様にする、名前とかももう一回再確認
   //todo:try to change themecolor
-  final themeData = ThemeData.dark().copyWith(
+  final themeDataLight = ThemeData(
     primaryColorLight: Colors.blue,
-    primaryColorDark: Colors.black,
     buttonColor: Colors.white,
     backgroundColor: Colors.blueGrey[50],
-    textSelectionColor: Colors.black,
+    bottomAppBarColor: Colors.cyan[50], //bottomappbarの背景色
+    //indicatorColor: ,
+    textSelectionColor: Colors.black, //文字の色
   );
+
+  final themeDataDark = ThemeData(
+    primaryColorDark: Colors.black,
+    buttonColor: Colors.black,
+    backgroundColor: Colors.blueGrey[900],
+    bottomAppBarColor: Colors.grey[400],
+    textSelectionColor: Colors.white
+  );
+
 
 
 }
