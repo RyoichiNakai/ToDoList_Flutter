@@ -24,6 +24,7 @@ class MyApp extends StatelessWidget {
     );
   }
 
+
   //todo:try to change themecolor
   final themeData = ThemeData(
     primarySwatch: Colors.blue,
