@@ -10,7 +10,8 @@ class MyFloatingButton{
   static Widget buildFloatingButton(BuildContext context) {
     return FloatingActionButton(
       onPressed: _addListTile,
-      child: Icon(CupertinoIcons.pencil),
+      backgroundColor: Theme.of(context).buttonColor,
+      child: Icon(CupertinoIcons.pencil, color: Theme.of(context).primaryColor),
     );
   }
 }

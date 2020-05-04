@@ -30,18 +30,17 @@ class MyApp extends StatelessWidget {
   final themeDataLight = ThemeData(
     primaryColorLight: Colors.blue,
     buttonColor: Colors.white,
-    backgroundColor: Colors.blueGrey[50],
-    bottomAppBarColor: Colors.cyan[50], //bottomappbarの背景色
-    //indicatorColor: ,
-    textSelectionColor: Colors.black, //文字の色
+    accentColor: Colors.blue, //ボタンの中のアイコンの色
+    textSelectionColor: Colors.white, //タブバーの文字の色
+    canvasColor: Colors.black, //カードの中の文字
   );
 
   final themeDataDark = ThemeData(
     primaryColorDark: Colors.black,
     buttonColor: Colors.black,
-    backgroundColor: Colors.blueGrey[900],
-    bottomAppBarColor: Colors.grey[400],
-    textSelectionColor: Colors.white
+    accentColor: Colors.white, //ボタンの中のアイコンの色
+    textSelectionColor: Colors.white, //タブバーの文字の色
+    canvasColor: Colors.white, //カードの中の文字
   );
 
 

@@ -13,6 +13,7 @@ class MyToDoListScreen extends StatefulWidget {
 
 
 class _MyToDoListScreenState extends State<MyToDoListScreen> {
+  bool doneFlag = false;
 
   @override
   Widget build(BuildContext context) {
@@ -23,6 +24,7 @@ class _MyToDoListScreenState extends State<MyToDoListScreen> {
           //todo:タブのリスト作ったらここも変更
           length: AppInfo.stringList.length,
           child: Scaffold(
+            backgroundColor: Theme.of(context).primaryColor,
             resizeToAvoidBottomInset: true,
             appBar: MyBottomAppBar.buildBottomAppBar(context),
             floatingActionButton: MyFloatingButton.buildFloatingButton(context),
@@ -40,7 +42,19 @@ class _MyToDoListScreenState extends State<MyToDoListScreen> {
   Widget _buildListItem(BuildContext context, String title) {
     return Card(
       child: ListTile(
-        title: Text(title, style: TextStyle(color: Theme.of(context).textSelectionColor),
+        leading: IconButton(
+            padding: const EdgeInsets.symmetric(vertical: 2.0, horizontal: 2.0),
+            icon: Icon(
+              !doneFlag ? Icons.check_box_outline_blank : Icons.check_box,
+              color: Colors.greenAccent,
+            ),
+            onPressed: () {
+              setState(() {
+                doneFlag = true;
+              });
+            }
+        ),
+        title: Text(title, style: TextStyle(color: Colors.black),
         ),
         onTap: null,
       ),

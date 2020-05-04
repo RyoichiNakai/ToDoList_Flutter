@@ -4,8 +4,8 @@ class AppInfo {
   static List stringList = ["nakai", "onakaita", "kaguyasamaha", "kokurasetai"];
 
   static final elevation = 0.0;
-  static final unselectedTabFontSize = 12.0;
-  static final selectedTabFontSize = 16.0;
+  static final unselectedTabFontSize = 14.0;
+  static final selectedTabFontSize = 18.0;
 
   static double getMediaQuerySizeHeight(BuildContext context){
     return MediaQuery.of(context).size.height;
