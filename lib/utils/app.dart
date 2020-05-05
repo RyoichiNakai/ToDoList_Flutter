@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class AppInfo {
-  static List stringList = ["nakai", "onakaita", "kaguyasamaha", "kokurasetai"];
+  static List<String> stringList = ["nakai", "onakaita", "kaguyasamaha", "kokurasetai"];
+  static List<String> titleList = ["Title A", "Title B", "Title C"];
+  static List<String> subTitleList = ["SubTitle A", "SubTitle B", "SubTitle C"];
 
   static final elevation = 0.0;
   static final unselectedTabFontSize = 14.0;
