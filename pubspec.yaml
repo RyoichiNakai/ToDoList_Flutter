@@ -19,6 +19,10 @@ dev_dependencies:
   flutter_localizations:  # 追加
     sdk: flutter  # 追加
 
+  sqflite: any
+  path: any
+  path_provider: any
+
 flutter:
 
   uses-material-design: true
