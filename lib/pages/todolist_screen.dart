@@ -1,13 +1,10 @@
 import 'dart:ui';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:todolist/widgets/bottom_appbar.dart';
 import 'package:todolist/widgets/floating_button.dart';
 import 'package:todolist/utils/app.dart';
 import 'package:todolist/utils/model/todolist_model.dart';
-import 'package:reorderables/reorderables.dart';
-import 'package:todolist/widgets/list_item.dart';
 
 class MyToDoListScreen extends StatefulWidget {
   MyToDoListScreen({Key key}) : super(key: key);
@@ -18,6 +15,7 @@ class MyToDoListScreen extends StatefulWidget {
 
 class _MyToDoListScreenState extends State<MyToDoListScreen> {
   List<ToDoListModel> modelList;
+  bool doneFlag = false;
 
   @override
   void initState() {
@@ -59,8 +57,10 @@ class _MyToDoListScreenState extends State<MyToDoListScreen> {
             padding: EdgeInsets.all(10.0),
             child: ReorderableListView(
               onReorder: (oldIndex, newIndex) => _onReorder(oldIndex, newIndex),
-              children: modelList.map((ToDoListModel model)
-              => ListItems.buildListItem(context, model.title, model.dateTime, model.key.toString())).toList(),
+              children: modelList
+                  .map((ToDoListModel model) => buildListItem(context,
+                      model.title, model.dateTime, model.key.toString()))
+                  .toList(),
             ),
           ),
 /*            ListView.builder(
@@ -74,5 +74,30 @@ class _MyToDoListScreenState extends State<MyToDoListScreen> {
     );
   }
 
-
+  Widget buildListItem(
+      BuildContext context, String title, String dateTime, String key,
+      {Function function}) {
+    return Card(
+      key: Key(key),
+      child: ListTile(
+        leading: InkWell(
+          onTap: () {
+            setState(() {
+              !doneFlag ? doneFlag = true : doneFlag = false;
+            });
+          },
+          child: Icon(
+              !doneFlag
+                  ? CupertinoIcons.circle
+                  : CupertinoIcons.check_mark_circled_solid,
+              color: Colors.blueAccent,
+              size: AppInfo.checkButtonSize),
+        ),
+        title: Text(title),
+        subtitle: Text(dateTime),
+        onTap: () {},
+      ),
+      //todo:長く押したら周りが黒くなるのなんで
+    );
+  }
 }

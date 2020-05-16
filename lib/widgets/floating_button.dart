@@ -11,8 +11,8 @@ class MyFloatingButton{
     return FloatingActionButton(
       //elevation: AppInfo.elevation,
       onPressed: _addListTile,
-      backgroundColor: Theme.of(context).buttonColor,
-      child: Icon(CupertinoIcons.pencil, color: Theme.of(context).primaryColor),
+      backgroundColor: Theme.of(context).backgroundColor,
+      child: Icon(CupertinoIcons.pencil, color: Theme.of(context).buttonColor),
     );
   }
 }

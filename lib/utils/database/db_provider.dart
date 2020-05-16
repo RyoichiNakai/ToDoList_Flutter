@@ -17,7 +17,6 @@ abstract class DatabaseProvider {
   createDBTable(Database database, int version);
 
   void init() async {
-    print('1');
     Directory documentDirectory = await getApplicationDocumentsDirectory();
     final path = join(documentDirectory.path, databaseName);
     //deleteDatabase(path);

@@ -36,9 +36,7 @@ class MyTopAppBar {
               _buildCupertinoNavigationBarTrailing(context)
             ],
           ),
-
     );
-
   }
 
   static Widget _buildCupertinoNavigationBarLeading(BuildContext context){

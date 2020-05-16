@@ -7,7 +7,6 @@ import 'package:todolist/widgets/test_text.dart';
 
 class MyHomeScreen extends StatefulWidget {
   MyHomeScreen({Key key}) : super(key: key);
-
   @override
   _MyHomeScreenState createState() => _MyHomeScreenState();
 }
@@ -15,7 +14,9 @@ class MyHomeScreen extends StatefulWidget {
 class _MyHomeScreenState extends State<MyHomeScreen> {
   @override
   Widget build(BuildContext context) {
+    //print(widget.key);
     return CupertinoPageScaffold(
+      //todo:繊維作のkeyでappbarを変えられるようにする
       navigationBar: MyTopAppBar.buildCupertinoNavigationBar(context),
       child : MyBottomNavigationBar(),
     );

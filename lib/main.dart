@@ -27,17 +27,19 @@ class MyApp extends StatelessWidget {
 
   //todo:色がいい感じになる様にする、名前とかももう一回再確認
   //todo:try to change themecolor
-  final themeDataLight = ThemeData(
+  final themeDataLight = ThemeData.light().copyWith(
     primaryColorLight: Colors.blue,
+    backgroundColor: Colors.blue[700],
     buttonColor: Colors.white,
     accentColor: Colors.blue, //ボタンの中のアイコンの色
     textSelectionColor: Colors.white, //タブバーの文字の色
     canvasColor: Colors.black, //カードの中の文字
   );
 
-  final themeDataDark = ThemeData(
+  final themeDataDark = ThemeData.dark().copyWith(
     primaryColorDark: Colors.black,
-    buttonColor: Colors.black,
+    backgroundColor: Colors.grey[800],
+    buttonColor: Colors.white,
     accentColor: Colors.white, //ボタンの中のアイコンの色
     textSelectionColor: Colors.white, //タブバーの文字の色
     canvasColor: Colors.white, //カードの中の文字

@@ -2,7 +2,7 @@ import 'package:todolist/utils/database/db_provider.dart';
 import 'package:sqflite/sqflite.dart';
 import 'package:todolist/utils/model/todolist_model.dart';
 
-class DbProvider10 extends DatabaseProvider {
+class DbProvider extends DatabaseProvider {
   @override
   String get databaseName => 'todolist.db';
 
@@ -10,7 +10,7 @@ class DbProvider10 extends DatabaseProvider {
   String get tableName => 'todolist';
 
   @override
-  createDBTable(Database database, int version) => database.execute(
+  createDBTable(Database database, int version) => db.execute(
       """
           CREATE TABLE $tableName(
             "key" INTEGER PRIMARY KEY AUTOINCREMENT,
