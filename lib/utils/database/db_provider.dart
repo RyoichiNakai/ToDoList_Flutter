@@ -13,8 +13,8 @@ import 'dart:io';
 abstract class DatabaseProvider {
   Database db;
   String get databaseName;
-  String get tableName;
-  createDBTable(Database database, int version);
+  //String get tableName;
+  void createDBTable(Database database, int version, String tableName);
 
   void init() async {
     Directory documentDirectory = await getApplicationDocumentsDirectory();

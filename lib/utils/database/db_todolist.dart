@@ -7,10 +7,7 @@ class DbProvider extends DatabaseProvider {
   String get databaseName => 'todolist.db';
 
   @override
-  String get tableName => 'todolist';
-
-  @override
-  createDBTable(Database database, int version) => db.execute(
+  createDBTable(Database database, int version, String tableName) => db.execute(
       """
           CREATE TABLE $tableName(
             "key" INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -20,7 +17,7 @@ class DbProvider extends DatabaseProvider {
       """,
   );
 
-  Future<void> insertList(ToDoListModel model) async{
+  Future<void> insertList(ToDoListModel model, String tableName) async{
     await db.insert(
       tableName,
       model.toMap(),
@@ -28,11 +25,18 @@ class DbProvider extends DatabaseProvider {
     );
   }
 
-  Future<void> removeList(ToDoListModel model) async{
+
+  Future<List<Map<String, dynamic>>> getList(String tableName) async{
+    final List<Map<String, dynamic>> maps
+    = await db.query(tableName, orderBy: "key");
+    return maps;
+  }
+
+  Future<void> removeList(ToDoListModel model, String tableName) async{
     //todo:implement
   }
 
-  Future<void> updateList(ToDoListModel model) async{
+  Future<void> updateList(ToDoListModel model, String tableName) async{
     //todo:implement
   }
 }
