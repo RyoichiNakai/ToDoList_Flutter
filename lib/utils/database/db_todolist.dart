@@ -49,6 +49,7 @@ class DbProvider extends DatabaseProvider {
   //取得
   Future<List<Map<String, dynamic>>> getList(String tableName) async{
     final List<Map<String, dynamic>> maps
+
     = await db.query(tableName, orderBy: "key");
     return maps;
   }
