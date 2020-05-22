@@ -12,16 +12,7 @@ class MyBottomAppBar {
           unselectedLabelColor: Theme.of(context).textSelectionColor,
           unselectedLabelStyle: TextStyle(fontSize: AppInfo.unselectedTabFontSize),
           labelColor: Theme.of(context).textSelectionColor,
-          labelStyle: TextStyle(fontSize: AppInfo.selectedTabFontSize, fontWeight: FontWeight.bold),
-/*            indicator: BoxDecoration(
-              color: Theme.of(context).primaryColor,
-              border: Border(
-                bottom: BorderSide(
-                  color: Theme.of(context).primaryColor,
-                  width: 2.0
-                )
-              )
-            ),*/
+          labelStyle: TextStyle(fontSize: AppInfo.unselectedTabFontSize),
           indicatorColor: Theme.of(context).textSelectionColor,
           indicatorWeight: 3.0,
           // タブに表示する内容

@@ -31,7 +31,7 @@ class MyTopAppBar {
             children: <Widget>[
               _buildCupertinoNavigationBarLeading(context),
               Expanded(
-                child: Center(child: Text('TODOリスト', style: TextStyle(color: Colors.white)) )
+                child: Center(child: Text(''))
               ),
               _buildCupertinoNavigationBarTrailing(context)
             ],

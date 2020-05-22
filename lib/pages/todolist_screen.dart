@@ -63,12 +63,6 @@ class _MyToDoListScreenState extends State<MyToDoListScreen> {
                   .toList(),
             ),
           ),
-/*            ListView.builder(
-                itemCount: AppInfo.stringList.length,
-                itemBuilder: (BuildContext context, int index){
-                return _buildListItem(context, AppInfo.stringList[index]);
-                }
-            ),*/
         ),
       ),
     );
@@ -77,26 +71,24 @@ class _MyToDoListScreenState extends State<MyToDoListScreen> {
   Widget buildListItem(
       BuildContext context, String title, String dateTime, String key,
       {Function function}) {
-    return Card(
+     return ListTile(
       key: Key(key),
-      child: ListTile(
-        leading: InkWell(
-          onTap: () {
-            setState(() {
-              !doneFlag ? doneFlag = true : doneFlag = false;
-            });
-          },
-          child: Icon(
-              !doneFlag
-                  ? CupertinoIcons.circle
-                  : CupertinoIcons.check_mark_circled_solid,
-              color: Colors.blueAccent,
-              size: AppInfo.checkButtonSize),
-        ),
-        title: Text(title),
-        subtitle: Text(dateTime),
-        onTap: () {},
+      leading: InkWell(
+        onTap: () {
+          setState(() {
+            !doneFlag ? doneFlag = true : doneFlag = false;
+          });
+        },
+        child: Icon(
+            !doneFlag
+                ? CupertinoIcons.circle
+                : CupertinoIcons.check_mark_circled_solid,
+            color: Colors.blueAccent,
+            size: AppInfo.checkButtonSize),
       ),
+      title: Text(title),
+      subtitle: Text(dateTime),
+      onTap: () {},
       //todo:長く押したら周りが黒くなるのなんで
     );
   }
